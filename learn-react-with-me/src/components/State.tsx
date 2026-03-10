@@ -32,13 +32,13 @@ export default function State() {
                 <h2>React's <code>setState</code></h2>
 
                 <pre className="code-block">
-                        {`React uses useState() to manage state.
+                    {`React uses useState() to manage state.
 
-                        const [count, setCount] = useState(0)
+                const [count, setCount] = useState(0)
 
-                        When the user clicks a button,
-                        Click calls one of the functions
-                        to update the count.`}
+                When the user clicks a button,
+                Click calls one of the functions
+                to update the count.`}
                 </pre>
 
                 <div className="button-group">

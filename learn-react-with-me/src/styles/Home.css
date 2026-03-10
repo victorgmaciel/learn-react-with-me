@@ -1,0 +1,88 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body {
+  background:
+    radial-gradient(circle at center, #0f2027, #203a43, #0a0f1a);
+    color: white;
+  text-align: center;
+
+}
+
+
+.dragon {
+  width: 500px;
+  max-width: 80vw;
+  height: auto;
+
+  animation:
+    floatDragon 4s ease-in-out infinite,
+    powerPulse 2.5s ease-in-out infinite;
+
+  filter:
+    drop-shadow(0 0 20px #61dafb)
+    drop-shadow(0 0 40px #00eaff)
+    drop-shadow(0 0 80px #0088ff);
+}
+
+/* FLOATING MOTION */
+
+@keyframes floatDragon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* POWER GLOW PULSE */
+
+@keyframes powerPulse {
+
+  0% {
+    filter:
+      drop-shadow(0 0 10px #61dafb)
+      drop-shadow(0 0 20px #00eaff);
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 40px #00eaff)
+      drop-shadow(0 0 80px #0088ff)
+      drop-shadow(0 0 120px #6f00ff);
+  }
+
+  100% {
+    filter:
+      drop-shadow(0 0 10px #61dafb)
+      drop-shadow(0 0 20px #00eaff);
+  }
+
+}
+
+/* AURA BEHIND DRAGON */
+
+header::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(
+    circle,
+    rgba(97,218,251,0.4),
+    rgba(0,136,255,0.2),
+    transparent
+  );
+
+  filter: blur(60px);
+  animation: auraPulse 3s infinite alternate;
+}
+
+@keyframes auraPulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+

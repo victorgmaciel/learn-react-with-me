@@ -1,0 +1,130 @@
+/* PAGE LAYOUT */
+
+.state-page {
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* HEADINGS */
+
+.state-page h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.state-page h2 {
+  margin-top: 40px;
+}
+
+/* PARAGRAPH TEXT */
+
+.state-page p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 10px auto;
+}
+
+/* HORIZONTAL LINE */
+
+hr {
+  margin: 30px auto;
+  width: 80%;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* CODE BLOCK */
+
+.code-block {
+  background-color: #0d1117;
+  color: #e6edf3;
+
+  padding: 24px 32px;
+  border-radius: 10px;
+
+  font-family: monospace;
+  font-size: 18px;
+  line-height: 1.6;
+
+  width: 80%;
+  max-width: 1000px;
+
+  margin: 30px auto;
+
+  text-align: left;
+  white-space: pre-wrap;
+
+  border: 1px solid rgba(97,218,251,0.4);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* BUTTON GROUP */
+
+.button-group {
+  margin-top: 20px;
+}
+
+/* COUNTER BUTTONS */
+
+.button-group button {
+  background: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button-group button:hover {
+  background: #61dafb;
+  transform: translateY(-2px);
+}
+
+/* COUNT CIRCLE */
+
+.count-circle {
+  margin: 25px auto;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  font-weight: bold;
+
+  background: #0d1117;
+  color: white;
+
+  border: 2px solid #61dafb;
+
+  box-shadow:
+    0 0 10px #61dafb,
+    0 0 30px #0088ff;
+}
+
+/* BACK BUTTON */
+
+.state-back-button {
+  background: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.state-back-button:hover {
+  background: #61dafb;
+}

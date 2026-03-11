@@ -20,6 +20,11 @@ function Home() {
                 <Link to="/learnForms" className="enter-link">
                     <button>Learn Forms</button>
                 </Link>
+                 <br />
+                 <br />
+                <Link to="/learnProps" className="enter-link">
+                    <button>Learn Props</button>
+                </Link>
             </div>
         </>
     );

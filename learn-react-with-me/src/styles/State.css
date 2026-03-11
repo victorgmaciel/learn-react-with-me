@@ -71,7 +71,7 @@ hr {
 /* COUNTER BUTTONS */
 
 .button-group button {
-  background: white;
+  background: 0 8px 20px rgba(97, 218, 251, 0.5);
   border: none;
   padding: 10px 18px;
   margin: 10px;
@@ -86,7 +86,6 @@ hr {
   transform: translateY(-2px);
 }
 
-/* COUNT CIRCLE */
 
 .count-circle {
   margin: 25px auto;
@@ -104,7 +103,7 @@ hr {
   font-weight: bold;
 
   background: #0d1117;
-  color: white;
+  color: 0 8px 20px rgba(97, 218, 251, 0.5);
 
   border: 2px solid #61dafb;
 
@@ -113,18 +112,11 @@ hr {
     0 0 30px #0088ff;
 }
 
-/* BACK BUTTON */
-
-.state-back-button {
-  background: white;
-  border: none;
-  padding: 10px 22px;
-  font-size: 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 20px;
+button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.state-back-button:hover {
-  background: #61dafb;
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(97, 218, 251, 0.5);
 }

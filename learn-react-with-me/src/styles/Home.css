@@ -2,21 +2,93 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  padding-top: 40px;
 }
+
 
 body {
-  background:
-    radial-gradient(circle at center, #0f2027, #203a43, #0a0f1a);
-    color: white;
+  background: radial-gradient(circle at center, #1e293b 0%, #020617 85%);
+  color: white;
   text-align: center;
+  font-family: 'Inter', sans-serif;
 
 }
+
+.opening-paragraph {
+  margin-top: 20vh;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+}
+
+.floating-react {
+  position: absolute;
+  font-size: 4rem;
+  color: #61dafb;
+  opacity: 0.45;
+  z-index: 0;
+  filter: drop-shadow(0 0 10px #61dafb);
+  animation: floatAround 6s ease-in-out infinite;
+}
+
+/* spread them out */
+.react-1 {
+  top: 12%;
+  left: 12%;
+  animation-delay: 0s;
+}
+
+.react-2 {
+  top: 52%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.react-3 {
+  bottom: 12%;
+  left: 18%;
+  animation-delay: 4s;
+}
+
+.react-4 {
+  top: 28%;
+  right: 22%;
+  animation-delay: 1s;
+}
+
+@keyframes floatAround {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(12deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.card {
+  text-align: center;
+  margin-top: 30px;
+}
+
 
 
 .dragon {
-  width: 500px;
-  max-width: 80vw;
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
   height: auto;
 
   animation:
@@ -24,17 +96,23 @@ body {
     powerPulse 2.5s ease-in-out infinite;
 
   filter:
-    drop-shadow(0 0 20px #61dafb)
-    drop-shadow(0 0 40px #00eaff)
-    drop-shadow(0 0 80px #0088ff);
+    drop-shadow(0 0 20px #61dafb) drop-shadow(0 0 40px #00eaff) drop-shadow(0 0 80px #0088ff);
 }
 
 /* FLOATING MOTION */
 
 @keyframes floatDragon {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* POWER GLOW PULSE */
@@ -43,21 +121,17 @@ body {
 
   0% {
     filter:
-      drop-shadow(0 0 10px #61dafb)
-      drop-shadow(0 0 20px #00eaff);
+      drop-shadow(0 0 10px #61dafb) drop-shadow(0 0 20px #00eaff);
   }
 
   50% {
     filter:
-      drop-shadow(0 0 40px #00eaff)
-      drop-shadow(0 0 80px #0088ff)
-      drop-shadow(0 0 120px #6f00ff);
+      drop-shadow(0 0 40px #00eaff) drop-shadow(0 0 80px #0088ff) drop-shadow(0 0 120px #6f00ff);
   }
 
   100% {
     filter:
-      drop-shadow(0 0 10px #61dafb)
-      drop-shadow(0 0 20px #00eaff);
+      drop-shadow(0 0 10px #61dafb) drop-shadow(0 0 20px #00eaff);
   }
 
 }
@@ -70,19 +144,31 @@ header::before {
   width: 500px;
   height: 500px;
 
-  background: radial-gradient(
-    circle,
-    rgba(97,218,251,0.4),
-    rgba(0,136,255,0.2),
-    transparent
-  );
+  background: radial-gradient(circle,
+      rgba(97, 218, 251, 0.4),
+      rgba(0, 136, 255, 0.2),
+      transparent);
 
   filter: blur(60px);
   animation: auraPulse 3s infinite alternate;
 }
 
 @keyframes auraPulse {
-  from { transform: scale(1); }
-  to { transform: scale(1.2); }
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
 }
 
+
+button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(97, 218, 251, 0.5);
+}

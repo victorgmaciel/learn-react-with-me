@@ -32,13 +32,13 @@ export default function State() {
                 <h2>React's <code>setState</code></h2>
 
                 <pre className="code-block">
-                    {`React uses useState() to manage state.
+                    {`React uses useState() to manage state. Example below!
+------------------------------------------------------------------
+const [count, setCount] = useState(0)
 
-                const [count, setCount] = useState(0)
-
-                When the user clicks a button,
-                Click calls one of the functions
-                to update the count.`}
+When the user clicks a button, we call setCount() to update the count state. React then re-renders the component to show the new count value.
+The Button onClick calls one of the functions
+to update the count.`}
                 </pre>
 
                 <div className="button-group">
@@ -51,12 +51,17 @@ export default function State() {
                 </div>
 
                 <br />
-
-                <Link to="/" className="enter-link">
-                    <button className="state-back-button">Back</button>
-                </Link>
-
             </div>
+
+
+            <hr />
+            <h2>Refactoring an Array's <code>state</code></h2>
+
+            <p>In React, it can be common for users to populate arrays with data. Here's how you can manage array state:</p>
+
+            <Link to="/" className="enter-link">
+                <button className="state-back-button">Back</button>
+            </Link>
         </>
     )
 }

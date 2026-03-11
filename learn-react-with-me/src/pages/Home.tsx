@@ -15,6 +15,11 @@ function Home() {
                 <Link to="/learnState" className="enter-link">
                     <button>Learn State</button>
                 </Link>
+                <br />
+                 <br />
+                <Link to="/learnForms" className="enter-link">
+                    <button>Learn Forms</button>
+                </Link>
             </div>
         </>
     );

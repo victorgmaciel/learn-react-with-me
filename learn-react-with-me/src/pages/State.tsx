@@ -57,7 +57,28 @@ to update the count.`}
             <hr />
             <h2>Refactoring an Array's <code>state</code></h2>
 
-            <p>In React, it can be common for users to populate arrays with data. Here's how you can manage array state:</p>
+            <p>In React, it can be common to populate arrays with data. Here's how you can manage array state:</p>
+
+            <pre className="code-block">
+{`React can also store arrays in state.
+
+------------------------------------------------------------------
+const [items, setItems] = useState([])
+
+To add an item, we create a new array and update the state:
+
+setItems([...items, "New Item"])
+
+The spread operator (...) copies the existing items and adds the new one.
+React then re-renders the component with the updated array.
+
+To remove an item, we can filter the array:
+
+setItems(items.filter(item => item !== "Item to remove"))
+
+The important rule: never modify the state directly.
+Always create a new array when updating React state.`}
+</pre>
 
             <Link to="/" className="enter-link">
                 <button className="state-back-button">Back</button>

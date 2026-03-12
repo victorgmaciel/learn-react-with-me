@@ -21,6 +21,10 @@ export default function WhatIsReact() {
             <Link to="/" className="enter-link">
                 <button className="state-back-button">Back</button>
             </Link>
+            <br />
+            <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
+                Want to know more?
+            </a>
         </div>
     );
 }
